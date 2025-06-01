@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: auto;
+  overflow-y: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  border: 0;
+}
+
+.container {
+  transition: all 1.4s;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.212);
+  width: 430px;
+  width: 590px;
+  height: 650px;
+  border-radius: 20px;
+  z-index: 10000;
+}
+
+.for-imagem img {
+  width: 10rem;
+}
+
+.header {
+  padding: 20px 40px;
+}
+
+.form {
+  padding: 0 40px 30px;
+}
+
+.form-control {
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.form-control input::placeholder {
+  color: #000000be;
+}
+
+.form-control input:hover {
+  background-color: #dadada75;
+}
+
+.form-control input:focus-visible {
+  outline: 1px solid #f4cf62;
+}
+
+.form-control input {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.212);
+  border: 2px solid #dadada75;
+  border-radius: 90px;
+  outline: 0;
+
+  display: block;
+
+  font-size: 14px;
+
+  width: 100%;
+  padding: 15px;
+}
+
+.form-control.success input {
+  border: 3px solid #4eca64;
+}
+
+.form-control.error input {
+  border: 3px solid #db5a5a;
+}
+
+.form-control.error i.img-error {
+  visibility: visible;
+}
+
+.form-control.success i.img-success {
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: #db5a5a;
+  visibility: visible;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.form button {
+  background-color: #2208c6;
+  border-radius: 60px;
+  color: #fff;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+
+  margin-top: 2px;
+
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #584ff5;
+  transition: 0.3s;
+}
+
+.box div {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: animate 4s linear infinite;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+}
+
+.box div:nth-child(1) {
+  top: 20%;
+  right: 20%;
+  animation: animate 8s linear infinite;
+}
+.box div:nth-child(2) {
+  top: 26%;
+  left: 89%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(3) {
+  top: 80%;
+  left: 90%;
+  animation: animate 5s linear infinite;
+}
+.box div:nth-child(4) {
+  top: 65%;
+  right: 75%;
+  animation: animate 7s linear infinite;
+}
+.box div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.box div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+.box div:nth-child(7) {
+  top: 70%;
+  left: 33%;
+  animation: animate 8s linear infinite;
+}
+.box div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.box div:nth-child(9) {
+  top: 23%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+.box div:nth-child(10) {
+  top: 35%;
+  left: 7%;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(50deg);
+  }
+  100% {
+    transform: scale(1.6) translateY(-250px) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .for-imagem {
+    display: none;
+  }
+  .container {
+    margin-top: 70px;
+    width: 700px;
+    margin-bottom: 20px;
+  }
+  .for {
+    width: 550px;
+  }
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 1.2rem;
+  }
+
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .for-imagem {
+    display: none;
+  }
+  .container {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 720px;
+  }
+
+  .form button {
+    background-color: #2208c6;
+    border-radius: 60px;
+    color: #fff;
+    padding: 13px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+  }
+}
